@@ -1,1 +1,3 @@
-# Deep-Learning-Approaches-for-Enhanced-Breast-Cancer-Detection-A-Comprehensive-Review
+# Deep-Learning-Approaches-for-Enhanced-Breast-Cancer-Detection
+Breast cancer diagnosis with deep learning entails running medical pictures such as mammograms through neural networks, especially Convolutional Neural Networks (CNNs), to identify malignant tumors. Normalization, augmentation, and segmentation are preprocessing techniques used to improve picture quality and variety. Models are trained on annotated datasets, frequently utilizing transfer learning with pre-trained architectures. The training method consists of forward and backward passes that update model weights depending on loss functions. Performance is assessed using evaluation criteria such as accuracy, precision, recall, F1 score, and AUC-ROC curve. This method attempts to give accurate and timely identification of breast cancer.
+
