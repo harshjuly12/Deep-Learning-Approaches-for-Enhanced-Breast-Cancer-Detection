@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <div class="icon">
+          <img src="logo.png" alt="Logo" class="logo-img" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="about.html">ABOUT</a></li>
+            <!-- <li><a href="signup">SIGNUP </a></li> -->
+            <li>
+              <select
+                name="dropdown"
+                onchange="if (this.value) window.location.href = this.value;"
+              >
+                <option value="" selected disabled>FACT-CHECKER</option>
+                <option
+                  value="https://www.who.int/news-room/fact-sheets/detail/breast-cancer"
+                >
+                  WHO
+                </option>
+                <option
+                  value="https://www.stopbreastcancer.org/information-center/myths-truths/"
+                >
+                  NBCC
+                </option>
+                <option
+                  value="https://cytecare.com/blog/breast-cancer/statistics-of-breast-cancer/"
+                >
+                  cytecare
+                </option>
+              </select>
+            </li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li>
+              <select
+                name="dropdown"
+                onchange="if (this.value) window.location.href = this.value;"
+              >
+                <option value="" selected disabled>Help</option>
+                <option value="https://bcrisktool.cancer.gov/">
+                  Cancer risk calculator tool
+                </option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <div class="search">
+          <input class="srch" type="search" placeholder="Type To text" />
+          <button class="btn">Search</button>
+        </div>
+      </div>
+      <div class="content">
+        <h1>Breast<br /><span>Cancer</span> <br />Detection</h1>
+        <div class="form">
+          <h2>Login Here</h2>
+          <form id="login-form">
+            <input type="email" id="email" placeholder="Enter Email Here" />
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter Password Here"
+            />
+            <button class="btnn" type="submit">Login</button>
+          </form>
+          <p class="link">
+            Don't have an account? <a href="#">Sign up here</a>
+          </p>
+          <p class="liw">Log in with</p>
+          <div class="icons">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </body>
+</html>

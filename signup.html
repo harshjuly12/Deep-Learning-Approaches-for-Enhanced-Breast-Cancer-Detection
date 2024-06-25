@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Breast cancer detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <!-- ... (your existing HTML code) ... -->
+        <div class="content">
+            <h1>Breast<br><span>Cancer</span> <br>Detection</h1>
+
+            <div class="form">
+                <div id="signupForm">
+                    <h2>Sign Up Here</h2>
+                    <input type="email" id="signupEmail" placeholder="Enter Email Here">
+                    <input type="password" id="signupPassword" placeholder="Enter Password Here">
+                    <button class="btnn" onclick="signup()">Sign Up</button>
+                </div>
+
+                <div id="loginForm" style="display:none;">
+                    <h2>Login Here</h2>
+                    <input type="email" id="loginEmail" placeholder="Enter Email Here">
+                    <input type="password" id="loginPassword" placeholder="Enter Password Here">
+                    <button class="btnn" onclick="login()">Login</button>
+                </div>
+
+                <p class="link" id="signupLink">Already have an account? <a href="#" onclick="toggleForms()">Log in here</a></p>
+                <p class="link" id="loginLink" style="display:none;">Don't have an account? <a href="#" onclick="toggleForms()">Sign up here</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+        var users = [];
+
+        function signup() {
+            var email = document.getElementById('signupEmail').value;
+            var password = document.getElementById('signupPassword').value;
+            users.push({ email: email, password: password });
+            alert('Sign up successful. Please log in.');
+            toggleForms();
+        }
+
+        function login() {
+            var email = document.getElementById('loginEmail').value;
+            var password = document.getElementById('loginPassword').value;
+            var isValid = false;
+            for (var i = 0; i < users.length; i++) {
+                if (email === users[i].email && password === users[i].password) {
+                    isValid = true;
+                    break;
+                }
+            }
+            if (isValid) {
+                alert('Login successful.');
+                // Redirect to the home page
+                window.location.href = "Homepage.html";
+            } else {
+                alert('Oops, there was an error. Please check your email and password.');
+            }
+        }
+
+        function toggleForms() {
+            var signupForm = document.getElementById('signupForm');
+            var loginForm = document.getElementById('loginForm');
+            var signupLink = document.getElementById('signupLink');
+            var loginLink = document.getElementById('loginLink');
+            if (signupForm.style.display === 'none') {
+                signupForm.style.display = 'block';
+                loginForm.style.display = 'none';
+                signupLink.style.display = 'none';
+                loginLink.style.display = 'block';
+            } else {
+                signupForm.style.display = 'none';
+                loginForm.style.display = 'block';
+                signupLink.style.display = 'block';
+                loginLink.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

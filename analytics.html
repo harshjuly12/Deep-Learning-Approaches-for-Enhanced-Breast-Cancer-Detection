@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Analytics</title>
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+        }
+        canvas {
+            margin: 0 auto;
+            display: block;
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            background-color: #fff;
+            animation: pulse 1s infinite alternate;
+        }
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+        .center {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        .center a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2196F3;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .center a:hover {
+            background-color: #0D47A1;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        .content p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Breast Cancer Analytics</h1>
+    </header>
+
+    <!-- Chart Canvas -->
+    <div style="width: 80%; margin: 0 auto;">
+        <canvas id="breastCancerChart" aria-label="Breast Cancer Statistics"></canvas>
+    </div>
+
+    <!-- Centered Link -->
+    <div class="center">
+        <a href="Prevention.html"> Measures</a>
+    </div>
+
+    <!-- JavaScript for Chart Rendering -->
+    <script>
+        // Chart data
+        const chartData = {
+            labels: ['Survival Rate', 'Mortality Rate', 'Early Detection Rate', 'Treatment Success Rate'],
+            datasets: [{
+                label: 'Breast Cancer Statistics',
+                backgroundColor: ['#4CAF50', '#F44336', '#2196F3', '#FF9800'],
+                data: [75, 25, 60, 80] // Dummy data, replace with actual statistics
+            }]
+        };
+
+        // Chart configuration
+        const chartConfig = {
+            type: 'bar',
+            data: chartData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        };
+
+        // Render the chart
+        const ctx = document.getElementById('breastCancerChart').getContext('2d');
+        new Chart(ctx, chartConfig);
+    </script>
+</body>
+</html>
