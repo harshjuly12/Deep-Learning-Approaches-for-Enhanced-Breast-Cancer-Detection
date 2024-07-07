@@ -1,7 +1,7 @@
 <table>
   <tr>
     <td><img src="https://github.com/harshjuly12/Deep-Learning-Approaches-for-Enhanced-Breast-Cancer-Detection/assets/112745312/2405d196-bb5f-4033-bc1f-3e5a61c34970" width="80" style="margin-right: 10;"></td>
-    <td><h1 style="margin: 0;">Breast Cancer Detection Using Machine Learning</h1></td>
+    <td><h1 style="margin: 0;">Breast Cancer Detection Using Deep Learning</h1></td>
   </tr>
 </table>
 
